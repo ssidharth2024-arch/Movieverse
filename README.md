@@ -1,86 +1,106 @@
-# 🎬 Movieverse (Netflix Clone)
+# 🎬 MovieVerse – Full Stack Movie Search Application
 
-Movieverse is a full-stack web application inspired by modern streaming platforms like Netflix. It allows users to browse movies and watch their trailers in a clean, interactive interface.
+## 📌 Project Overview
+
+MovieVerse is a full-stack web application that allows users to search for movies, view trending movies, and filter results by year. The application fetches real-time movie data using the OMDb API and displays it in a clean, user-friendly interface.
 
 ---
 
 ## 🚀 Features
 
-* 🎥 Modern streaming-style UI
-* 📂 Browse movie collections
-* ▶️ Watch trailers (YouTube integration)
-* 🌐 Backend API for movie data
-* ⚡ Fast and lightweight
+* 🔍 Search movies by name
+* 🎞️ Display trending movies on load
+* 📅 Filter movies by year
+* 🌐 Real-time data using OMDb API
+* ⚡ Fast and responsive UI
+* 🔐 Backend integration to secure API key
 
 ---
 
-## 🛠️ Tech Stack
+## 🧩 Tech Stack
 
-**Frontend:**
+### Frontend
 
 * HTML
 * CSS
 * JavaScript
 
-**Backend:**
+### Backend
 
 * Node.js
 * Express.js
 
-**Database:**
+### API
 
-* JSON (local storage)
+* OMDb API (Open Movie Database)
 
 ---
 
 ## 📁 Project Structure
 
-```bash
+```
 movieverse/
-│
-├── backend/
-│   ├── server.js
-│   ├── movies.json
-│
 ├── frontend/
 │   ├── index.html
 │   ├── style.css
-│   ├── script.js
+│   └── script.js
+│
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── .env
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Setup Instructions
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone / Download Project
 
 ```bash
-git clone https://github.com/your-username/movieverse.git
+git clone <your-repo-link>
 cd movieverse
 ```
 
 ---
 
-### 2️⃣ Run Backend
+### 2️⃣ Install Backend Dependencies
 
 ```bash
 cd backend
-npm init -y
-npm install express cors
-node server.js
-```
-
-Server runs on:
-
-```
-http://localhost:3000
+npm install express cors dotenv
 ```
 
 ---
 
-### 3️⃣ Run Frontend
+### 3️⃣ Configure Environment Variables
 
-Open:
+Create a `.env` file inside the backend folder:
+
+```
+API_KEY=your_omdb_api_key
+PORT=5000
+```
+
+---
+
+### 4️⃣ Run Backend Server
+
+```bash
+node server.js
+```
+
+Server will run on:
+
+```
+http://localhost:5000
+```
+
+---
+
+### 5️⃣ Run Frontend
+
+Open using Live Server or browser:
 
 ```
 frontend/index.html
@@ -88,47 +108,47 @@ frontend/index.html
 
 ---
 
-## 📌 API Endpoints
+## 🔄 Application Flow
 
-| Method | Endpoint | Description    |
-| ------ | -------- | -------------- |
-| GET    | /movies  | Get all movies |
-
----
-
-## 🎯 How It Works
-
-* Backend serves movie data from `movies.json`
-* Frontend fetches data using API
-* Movies are displayed in a scrollable row
-* Clicking a movie opens its trailer
-
----
-
-## 🔥 Future Enhancements
-
-* 🔐 User Authentication (Login/Signup)
-* 🎬 Built-in video player
-* 📺 Categories (Action, Comedy, etc.)
-* ⭐ Watchlist feature
-* 🌍 Integration with real APIs (TMDB)
-* 📱 Fully responsive design
+```
+Frontend (UI)
+     ↓
+Fetch Request
+     ↓
+Backend (Node.js API)
+     ↓
+OMDb API
+     ↓
+Response → Frontend → Display Movies
+```
 
 ---
 
-## ⚠️ Disclaimer
+## 🧠 Key Concepts Used
 
-Movieverse is created for educational purposes only.
-It is inspired by streaming platforms like Netflix but is not affiliated with them.
-
----
-
-## 👨‍💻 Author
-
-* Your Name
+* REST API Integration
+* Asynchronous JavaScript (fetch / async-await)
+* DOM Manipulation
+* Client-Server Architecture
+* Environment Variables (dotenv)
 
 ---
 
-## ⭐ Support
+## 🎯 Future Enhancements
 
-If you like this project, give it a star ⭐ on GitHub!
+* ⭐ Movie details popup
+* ❤️ Add to favorites
+* 🔐 User authentication
+* 📊 Advanced filters
+
+---
+
+## 🧑‍💻 Author
+
+Mohit Choudhary
+
+---
+
+## 📜 License
+
+This project is for educational purposes.
